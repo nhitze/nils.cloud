@@ -1,4 +1,6 @@
 <?php
+$key = file_get_contents('~/.key');
+if($_GET['key']!=$key) { die('fuck off'); }
 $nilsDB = './nils.db';
 if(is_file($nilsDB)) {
 	$fileContent = file_get_contents($nilsDB);
